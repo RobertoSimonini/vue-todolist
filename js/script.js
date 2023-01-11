@@ -48,5 +48,5 @@ console.log('OK VUE', Vue);
             }
         }
     })
-a
+
 app.mount('#root');
