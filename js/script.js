@@ -14,7 +14,7 @@ console.log('OK VUE', Vue);
 
     #MILESTONE 2
     Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il task viene rimosso dalla lista.
-    MILESTONE 3
+    #MILESTONE 3
     Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo task, che quindi viene aggiunto alla lista dei todo esistenti.
 
     *BONUS:
@@ -26,6 +26,10 @@ console.log('OK VUE', Vue);
     const app = Vue.createApp({
         data() {
             return {
+                newTask : {
+                    text: '',
+                    done: false
+                },
                 tasks: [
                     {
                         text: 'fare i compiti',
@@ -45,8 +49,13 @@ console.log('OK VUE', Vue);
         methods: {
             closeTask(i){
                 this.tasks.splice(i, 1);
+            },
+
+            addTask(){
+                this.tasks.push(this.newTask);
             }
         }
+        
     })
 
 app.mount('#root');
