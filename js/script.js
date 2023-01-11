@@ -51,6 +51,10 @@ console.log('OK VUE', Vue);
                 this.tasks.splice(i, 1);
             },
 
+            toggleDone(i) {
+                this.tasks.done(i) = !this.tasks.done(i);
+            },
+
             addTask(){
                 if (this.newTask.text) {
                         this.tasks.push(this.newTask);
@@ -60,7 +64,10 @@ console.log('OK VUE', Vue);
                         };
                 }
             }
+  
         }
+
+        
         
     })
 
