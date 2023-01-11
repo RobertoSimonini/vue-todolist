@@ -36,7 +36,9 @@
         <!-- Inserisco il main -->
         <main>
             <ul class="list-group my-5">
-                <li v-for=" task in tasks" class="list-group-item"> {{task.text}} </li>
+                <li v-for=" (task, i) in tasks" class="list-group-item d-flex align-items-center justify-content-between"> {{task.text}}
+                    <button type="button" class="btn-close" @click="closeTask(i)" aria-label="Close"></button>
+                </li>
                 
             </ul>
         </main>

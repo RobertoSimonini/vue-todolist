@@ -36,12 +36,17 @@ console.log('OK VUE', Vue);
                         done: true
                     },
                     {
-                        text: 'fare il buccato',
+                        text: 'fare il bucato',
                         done: false
                     }
                 ]
             }
+        },
+        methods: {
+            closeTask(i){
+                this.tasks.splice(i, 1);
+            }
         }
     })
-
+a
 app.mount('#root');
