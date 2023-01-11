@@ -23,6 +23,25 @@ console.log('OK VUE', Vue);
 
     */
 
-    const app = Vue.createapp({
-        
+    const app = Vue.createApp({
+        data() {
+            return {
+                tasks: [
+                    {
+                        text: 'fare i compiti',
+                        done: false
+                    },
+                    {
+                        text: 'fare la spesa',
+                        done: true
+                    },
+                    {
+                        text: 'fare il buccato',
+                        done: false
+                    }
+                ]
+            }
+        }
     })
+
+app.mount('#root');

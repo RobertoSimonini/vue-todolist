@@ -34,8 +34,11 @@
         </header>   
 
         <!-- Inserisco il main -->
-        <main class="w-50 mx-auto">
-
+        <main>
+            <ul class="list-group my-5">
+                <li v-for=" task in tasks" class="list-group-item"> {{task.text}} </li>
+                
+            </ul>
         </main>
     </div>
 </body>
