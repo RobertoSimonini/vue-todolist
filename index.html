@@ -29,7 +29,7 @@
         <!-- Inserisco l'input per potere aggiungere i task  -->
             <div class="input-group mb-3 w-50 mx-auto">
                 <input type="text" class="form-control" placeholder="Nuovo task" v-model="newTask.text">
-                <button class="btn btn-outline-secondary" type="button" @click="addTask">Aggiungi</button>
+                <button class="btn btn-outline-secondary" type="button" @click="addTask.trim()">Aggiungi</button>
             </div>
         </header>   
 
