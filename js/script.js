@@ -52,7 +52,7 @@ console.log('OK VUE', Vue);
             },
 
             toggleDone(i) {
-                this.tasks.done(i) = !this.tasks.done(i);
+                this.tasks[i].done = !this.tasks[i].done;
             },
 
             addTask(){
