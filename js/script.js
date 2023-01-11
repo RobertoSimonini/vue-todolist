@@ -52,11 +52,13 @@ console.log('OK VUE', Vue);
             },
 
             addTask(){
-                this.tasks.push(this.newTask);
-                this.newTask = {
-                    text: '',
-                    done: false
-                };
+                if (this.newTask.text) {
+                        this.tasks.push(this.newTask);
+                        this.newTask = {
+                            text: '',
+                            done: false
+                        };
+                }
             }
         }
         
